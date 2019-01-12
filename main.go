@@ -4,15 +4,11 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"os"
 )
 
 func main() {
 	http.HandleFunc("/", handleDefaultPath)
-
-	port := os.Getenv("PORT")
-
-	log.Fatal(http.ListenAndServe(port, nil))
+	log.Fatal(http.ListenAndServe(":8000", nil))
 }
 
 func handleDefaultPath(w http.ResponseWriter, r *http.Request) {
