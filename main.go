@@ -10,10 +10,8 @@ import (
 func main() {
 	http.HandleFunc("/", handleDefaultPath)
 
-	port, err := os.Getenv("PORT")
-	if err != nil {
+	port := os.Getenv("PORT")
 
-	}
 	log.Fatal(http.ListenAndServe(port, nil))
 }
 
