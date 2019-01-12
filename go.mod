@@ -1,1 +1,1 @@
-module chronous-todo
+module chronous
